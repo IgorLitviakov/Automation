@@ -1,3 +1,4 @@
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -22,12 +23,24 @@ public class LoginPageTest {
 
     @Test
     public void userLogin() {
+        String user = "webinar5";
         WebElement loginField = driver.findElement(By.xpath("//*[@id=\"login-form-username\"]"));
-        loginField.sendKeys("webinar5");
+        loginField.sendKeys(user);
         WebElement passwordField = driver.findElement(By.xpath("//*[@id=\"login-form-password\"]"));
         passwordField.sendKeys("webinar5");
         WebElement loginButton = driver.findElement(By.xpath("//*[@id=\"login-form-submit\"]"));
         loginButton.click();
+        WebElement login = driver.findElement(By.xpath("//*[@id=\"header-details-user-fullname\"]"));
+        login.click();
+        WebElement profileButton = driver.findElement(By.xpath("//*[@id=\"view_profile\"]"));
+        profileButton.click();
+        WebElement userName = driver.findElement(By.xpath("//*[@id=\"up-user-title-name\"]"));
+        Assert.assertEquals(user,userName.getText());
+    }
+
+    @AfterClass
+    public static void endTest(){
+        driver.quit();
     }
 }
     
