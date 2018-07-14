@@ -33,3 +33,4 @@ public class LoginPage {
         Assert.assertEquals("autotestorgua@ukr.net", mailUser);
     }
 }
+    
