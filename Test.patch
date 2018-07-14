@@ -1,0 +1,15 @@
+Index: src/test/java/LoginPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/LoginPage.java	(revision dce8e1ca4b89e323ad0322fbb02e71818c350b5c)
++++ src/test/java/LoginPage.java	(date 1531529213000)
+@@ -27,6 +27,7 @@
+         WebElement passwordField = driver.findElement(By.id("password"));
+         passwordField.sendKeys("testpass");
+         WebElement loginButton = driver.findElement(By.xpath("//button[text()='Войти']"));
++        System.out.print("Test");
+         loginButton.click();
+         WebElement profileUser = driver.findElement(By.cssSelector(".login-button__user"));
+         String mailUser = profileUser.getText();
