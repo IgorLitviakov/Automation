@@ -27,15 +27,6 @@ public class LoginPage {
         WebElement passwordField = driver.findElement(By.id("password"));
         passwordField.sendKeys("testpass");
         WebElement loginButton = driver.findElement(By.xpath("//button[text()='Войти']"));
-        System.out.print("Test");
-
-        System.out.print("Test");
-        System.out.print("Test");
-        System.out.print("Test");
-        System.out.print("Test");
-        System.out.print("Test");
-        System.out.print("Test");
-
         loginButton.click();
         WebElement profileUser = driver.findElement(By.cssSelector(".login-button__user"));
         String mailUser = profileUser.getText();
