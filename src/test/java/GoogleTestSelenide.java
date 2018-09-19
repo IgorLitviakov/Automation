@@ -15,7 +15,4 @@ public class GoogleTestSelenide {
             $$(By.className("g")).shouldHave(CollectionCondition.size(10));
             $(By.className("g")).shouldHave(Condition.text("Hello world! — Вікіпедія"));
         }
-
-
-
 }
