@@ -20,6 +20,9 @@ public class LoginPageTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(ConfigProperties.getTestProperty("url"));
+        System.out.println("\n\n\n\n\n\n\n\n\n");
+        OutputPropertyFile.output_property_file();
+        System.out.println("\n\n\n\n\n\n\n\n\n");
     }
 
     @Test
